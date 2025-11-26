@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 authors = ["Ying Kit WONG"]
 description = "A Rust library for searching tools across MCP servers"
-license = "Apache 2.0"
+license = "Apache-2.0"
 repository = "https://github.com/yingkitw/toolsearch"
 
 [lib]
