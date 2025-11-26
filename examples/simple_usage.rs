@@ -1,6 +1,6 @@
 //! Simple usage examples showing the intuitive API
 //!
-//! This example demonstrates how easy it is to use toolsearch-rs
+//! This example demonstrates how easy it is to use toolsearch
 //! with the simplified API that handles complexity automatically.
 
 use toolsearch::{load_servers, simple_search, SearchBuilder};

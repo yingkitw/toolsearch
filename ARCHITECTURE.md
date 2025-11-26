@@ -1,10 +1,10 @@
 # Architecture
 
-This document describes the architecture of toolsearch-rs, including design decisions, component structure, and data flow.
+This document describes the architecture of toolsearch, including design decisions, component structure, and data flow.
 
 ## Overview
 
-toolsearch-rs is designed to solve the tool discovery problem in agentic AI systems by providing intelligent search and filtering of MCP tools across multiple servers. The architecture prioritizes:
+toolsearch is designed to solve the tool discovery problem in agentic AI systems by providing intelligent search and filtering of MCP tools across multiple servers. The architecture prioritizes:
 
 1. **Simplicity**: Easy-to-use API that hides complexity
 2. **Performance**: Parallel queries and efficient filtering

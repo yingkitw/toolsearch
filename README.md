@@ -28,7 +28,7 @@ When building agentic AI systems with MCP (Model Context Protocol), developers f
 
 ### The Solution
 
-`toolsearch-rs` solves this by:
+`toolsearch` solves this by:
 
 - **🔍 Intelligent Search**: Search across all MCP servers to find only relevant tools
 - **🎯 Context-Aware Filtering**: Filter tools based on the current task context
@@ -70,7 +70,7 @@ let relevant_tools = simple_search(&servers, "read file disk").await?;
 
 **Scenario**: Agentic AI system with 15 MCP servers, 450 total tools
 
-| Metric | Without toolsearch-rs | With toolsearch-rs | Improvement |
+| Metric | Without toolsearch | With toolsearch | Improvement |
 |--------|----------------------|---------------------|-------------|
 | Tools sent to LLM | 450 | 5-10 | **98% reduction** |
 | Context tokens | ~135,000 | ~2,000 | **98.5% reduction** |
@@ -487,7 +487,7 @@ cargo test
 
 ### Agentic AI Systems
 
-**Before toolsearch-rs:**
+**Before toolsearch:**
 ```
 User: "Read the config file"
 Agent: [Receives 500 tools, 150K tokens]
@@ -496,7 +496,7 @@ Agent: [Makes wrong tool call]
 Result: ❌ Failure
 ```
 
-**After toolsearch-rs:**
+**After toolsearch:**
 ```
 User: "Read the config file"
 Agent: [Searches tools → finds 3 relevant tools, 1.5K tokens]
@@ -525,7 +525,7 @@ For LLMs with limited context windows:
 
 ```mermaid
 graph TB
-    A[Agentic AI System] --> B[toolsearch-rs]
+    A[Agentic AI System] --> B[toolsearch]
     B --> C[Search Query]
     C --> D[Parallel Server Queries]
     D --> E[MCP Server 1<br/>50 tools]
@@ -537,7 +537,7 @@ graph TB
     H --> I[Relevant Tools<br/>3-5 tools]
     I --> J[LLM Context<br/>1.5K tokens]
     
-    K[Without toolsearch-rs] --> L[All Tools<br/>500 tools]
+    K[Without toolsearch] --> L[All Tools<br/>500 tools]
     L --> M[LLM Context<br/>150K tokens]
     
     style B fill:#e1f5ff

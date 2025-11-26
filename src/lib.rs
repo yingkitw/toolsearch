@@ -1,4 +1,4 @@
-//! # toolsearch-rs
+//! # toolsearch
 //!
 //! A Rust library for searching tools across multiple MCP (Model Context Protocol) servers.
 //!

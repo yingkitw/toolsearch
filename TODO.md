@@ -1,6 +1,6 @@
 # TODO
 
-This file tracks planned improvements, features, and tasks for toolsearch-rs.
+This file tracks planned improvements, features, and tasks for toolsearch.
 
 ## High Priority
 
