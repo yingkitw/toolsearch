@@ -116,7 +116,7 @@ fn is_likely_regex(query: &str) -> bool {
 /// let servers = vec![
 ///     ServerConfig {
 ///         name: "server1".to_string(),
-///         transport: toolsearch_rs::TransportConfig::Stdio {
+///         transport: toolsearch::TransportConfig::Stdio {
 ///             command: "mcp-server".to_string(),
 ///             args: vec![],
 ///             env: HashMap::new(),
