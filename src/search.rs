@@ -108,8 +108,8 @@ fn is_likely_regex(query: &str) -> bool {
 ///
 /// # Example
 /// ```no_run
-/// use toolsearch_rs::simple_search;
-/// use toolsearch_rs::ServerConfig;
+/// use toolsearch::simple_search;
+/// use toolsearch::ServerConfig;
 /// use std::collections::HashMap;
 ///
 /// # async fn example() -> Result<(), Box<dyn std::error::Error>> {

@@ -7,7 +7,7 @@
 //! 4. Case-sensitive searches
 //! 5. Word boundary matching
 
-use toolsearch_rs::{
+use toolsearch::{
     search_tools, search_tools_with_keywords, search_tools_with_regex, SearchCriteria, SearchFields,
     SearchMode, ServerConfig, TransportConfig,
 };

@@ -5,7 +5,7 @@
 //! 2. Use SearchBuilder to list all tools
 //! 3. Display results grouped by server
 
-use toolsearch_rs::{load_servers, SearchBuilder};
+use toolsearch::{load_servers, SearchBuilder};
 use serde_json;
 
 #[tokio::main]

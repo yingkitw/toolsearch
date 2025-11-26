@@ -915,7 +915,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "toolsearch-rs"
+name = "toolsearch"
 version = "0.1.0"
 dependencies = [
  "anyhow",

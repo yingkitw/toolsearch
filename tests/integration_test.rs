@@ -1,9 +1,9 @@
-use toolsearch_rs::{list_all_tools, search_tools_with_query, SearchCriteria, ServerConfig, TransportConfig};
+use toolsearch::{list_all_tools, search_tools_with_query, SearchCriteria, ServerConfig, TransportConfig};
 use std::collections::HashMap;
 
 #[tokio::test]
 async fn test_search_criteria() {
-    use toolsearch_rs::SearchCriteria;
+    use toolsearch::SearchCriteria;
     use rmcp::model::Tool;
 
     use std::sync::Arc;

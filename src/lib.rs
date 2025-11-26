@@ -10,7 +10,7 @@
 //! ## Simple Example
 //!
 //! ```no_run
-//! use toolsearch_rs::{load_servers, simple_search};
+//! use toolsearch::{load_servers, simple_search};
 //!
 //! # async fn example() -> Result<(), Box<dyn std::error::Error>> {
 //! // Load servers from config file (validates automatically)
@@ -28,7 +28,7 @@
 //! ## Advanced Example with Builder
 //!
 //! ```no_run
-//! use toolsearch_rs::{load_servers, SearchBuilder};
+//! use toolsearch::{load_servers, SearchBuilder};
 //!
 //! # async fn example() -> Result<(), Box<dyn std::error::Error>> {
 //! let servers = load_servers("servers.json")?;

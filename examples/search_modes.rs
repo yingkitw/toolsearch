@@ -6,7 +6,7 @@
 //! - Keyword matching
 //! - Word boundary matching
 
-use toolsearch_rs::{search_tools, SearchCriteria, SearchFields, SearchMode, ServerConfig, TransportConfig};
+use toolsearch::{search_tools, SearchCriteria, SearchFields, SearchMode, ServerConfig, TransportConfig};
 use std::collections::HashMap;
 
 #[tokio::main]

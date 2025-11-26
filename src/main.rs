@@ -1,5 +1,5 @@
 use clap::{Parser, Subcommand};
-use toolsearch_rs::{load_servers, SearchBuilder};
+use toolsearch::{load_servers, SearchBuilder};
 
 #[derive(Parser)]
 #[command(name = "toolsearch")]
@@ -125,7 +125,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 /// Print search results in the specified format
 fn print_results(
-    results: &[toolsearch_rs::ToolSearchMatch],
+    results: &[toolsearch::ToolSearchMatch],
     format: &str,
     header: &str,
 ) -> Result<(), Box<dyn std::error::Error>> {

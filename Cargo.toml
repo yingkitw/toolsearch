@@ -1,5 +1,5 @@
 [package]
-name = "toolsearch-rs"
+name = "toolsearch"
 version = "0.1.0"
 edition = "2024"
 authors = ["Ying Kit WONG"]
@@ -8,7 +8,7 @@ license = "Apache 2.0"
 repository = "https://github.com/yingkitw/toolsearch-rs"
 
 [lib]
-name = "toolsearch_rs"
+name = "toolsearch"
 path = "src/lib.rs"
 
 [[bin]]

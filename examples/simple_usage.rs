@@ -3,7 +3,7 @@
 //! This example demonstrates how easy it is to use toolsearch-rs
 //! with the simplified API that handles complexity automatically.
 
-use toolsearch_rs::{load_servers, simple_search, SearchBuilder};
+use toolsearch::{load_servers, simple_search, SearchBuilder};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {

@@ -1,4 +1,4 @@
-# toolsearch-rs
+# toolsearch
 
 A Rust library for searching tools across multiple MCP (Model Context Protocol) servers.
 
@@ -119,7 +119,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-toolsearch-rs = "0.1.0"
+toolsearch = "0.1.0"
 ```
 
 ## Usage
@@ -129,7 +129,7 @@ toolsearch-rs = "0.1.0"
 The simplest way to search tools:
 
 ```rust
-use toolsearch_rs::{load_servers, simple_search};
+use toolsearch::{load_servers, simple_search};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -149,7 +149,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### Builder Pattern for More Control
 
 ```rust
-use toolsearch_rs::{load_servers, SearchBuilder};
+use toolsearch::{load_servers, SearchBuilder};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -326,7 +326,7 @@ pub async fn search_tools(
 #### Basic Search
 
 ```rust
-use toolsearch_rs::{SearchCriteria, SearchMode, SearchFields};
+use toolsearch::{SearchCriteria, SearchMode, SearchFields};
 
 // Simple query search
 let criteria = SearchCriteria::with_query("search".to_string());
@@ -388,7 +388,7 @@ let criteria = SearchCriteria::with_regex(r"file|directory".to_string())
 #### Search Options
 
 ```rust
-use toolsearch_rs::{SearchOptions, SortOrder};
+use toolsearch::{SearchOptions, SortOrder};
 use std::time::Duration;
 
 let options = SearchOptions {

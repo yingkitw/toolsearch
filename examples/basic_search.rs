@@ -5,7 +5,7 @@
 //! 2. Search with a simple query (auto-detects mode)
 //! 3. Display the results
 
-use toolsearch_rs::{load_servers, simple_search};
+use toolsearch::{load_servers, simple_search};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {

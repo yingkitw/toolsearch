@@ -1,4 +1,4 @@
-use toolsearch_rs::{SearchCriteria, SearchFields, SearchMode, SearchOptions, ServerConfig, SortOrder, TransportConfig};
+use toolsearch::{SearchCriteria, SearchFields, SearchMode, SearchOptions, ServerConfig, SortOrder, TransportConfig};
 use std::collections::HashMap;
 use std::time::Duration;
 
@@ -103,7 +103,7 @@ fn test_tool_search_match_tool_name() {
     use std::sync::Arc;
     use serde_json::Map;
     use rmcp::model::Tool;
-    use toolsearch_rs::ToolSearchMatch;
+    use toolsearch::ToolSearchMatch;
 
     let tool = Tool {
         name: "test_tool".to_string().into(),
