@@ -1,0 +1,106 @@
+[
+  {
+    "name": "file_operations_server",
+    "transport": {
+      "type": "stdio",
+      "command": "mcp-file-server",
+      "args": [
+        "--verbose",
+        "--log-level=debug",
+        "--config=/etc/mcp/file-server.json"
+      ],
+      "env": {
+        "RUST_LOG": "debug",
+        "MCP_SERVER_PORT": "8080",
+        "FILE_CACHE_SIZE": "1000",
+        "ENABLE_COMPRESSION": "true"
+      }
+    }
+  },
+  {
+    "name": "database_server",
+    "transport": {
+      "type": "stdio",
+      "command": "mcp-db-server",
+      "args": [
+        "--host=localhost",
+        "--port=5432",
+        "--database=mydb"
+      ],
+      "env": {
+        "DB_USER": "admin",
+        "DB_PASSWORD": "secret",
+        "DB_POOL_SIZE": "10",
+        "RUST_LOG": "info"
+      }
+    }
+  },
+  {
+    "name": "api_integration_server",
+    "transport": {
+      "type": "stdio",
+      "command": "mcp-api-server",
+      "args": [
+        "--config=/etc/mcp/api-config.json",
+        "--timeout=30s",
+        "--retry=3"
+      ],
+      "env": {
+        "API_KEY": "your-api-key-here",
+        "API_BASE_URL": "https://api.example.com",
+        "ENVIRONMENT": "production",
+        "RUST_LOG": "warn"
+      }
+    }
+  },
+  {
+    "name": "web_scraping_server",
+    "transport": {
+      "type": "stdio",
+      "command": "mcp-web-scraper",
+      "args": [
+        "--user-agent=MyBot/1.0",
+        "--rate-limit=10/min"
+      ],
+      "env": {
+        "PROXY_URL": "http://proxy.example.com:8080",
+        "CACHE_TTL": "3600",
+        "RUST_LOG": "info"
+      }
+    }
+  },
+  {
+    "name": "ai_ml_server",
+    "transport": {
+      "type": "stdio",
+      "command": "mcp-ai-server",
+      "args": [
+        "--model=gpt-4",
+        "--temperature=0.7",
+        "--max-tokens=2048"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "sk-...",
+        "MODEL_CACHE_DIR": "/var/cache/models",
+        "RUST_LOG": "debug"
+      }
+    }
+  },
+  {
+    "name": "monitoring_server",
+    "transport": {
+      "type": "stdio",
+      "command": "mcp-monitor",
+      "args": [
+        "--metrics-port=9090",
+        "--health-check-interval=30s"
+      ],
+      "env": {
+        "PROMETHEUS_ENABLED": "true",
+        "GRAFANA_URL": "http://grafana:3000",
+        "RUST_LOG": "info"
+      }
+    }
+  }
+]
+

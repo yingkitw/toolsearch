@@ -1,0 +1,23 @@
+[
+  {
+    "name": "example_server",
+    "transport": {
+      "type": "stdio",
+      "command": "your-mcp-server",
+      "args": [],
+      "env": {}
+    }
+  },
+  {
+    "name": "another_server",
+    "transport": {
+      "type": "stdio",
+      "command": "another-mcp-server",
+      "args": ["--verbose"],
+      "env": {
+        "RUST_LOG": "debug"
+      }
+    }
+  }
+]
+
